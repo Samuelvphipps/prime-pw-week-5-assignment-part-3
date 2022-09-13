@@ -6,6 +6,7 @@ let object={};
  object.artist=artist;
  object.yearPublished=yearPublished;
  collection.push(object);
+ console.log('Song added:', object);
  return object;
 }
 
@@ -15,3 +16,5 @@ addToCollection('Chopin', 'Andante spianato et grande polonaise brillante', 1834
 addToCollection('Neil Young', 'Harvest Moon', 1992);
 addToCollection('Daughter', 'Loudon Wainwright III', 2007);
 addToCollection('Brooklyn Ferry', 'Holy Hive', 2021);
+
+console.log('list of songs:', collection);
