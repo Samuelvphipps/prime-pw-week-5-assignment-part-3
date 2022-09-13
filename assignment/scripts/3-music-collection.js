@@ -21,8 +21,24 @@ console.log('list of songs:', collection);
 
 function showCollection(array){
     console.log('Number of songs in collection:', array.length);
-    for(i=0; i<array.length-1; i++){
+    for(i=0; i<array.length; i++){
         console.log(array[i].title, 'by', array[i].artist, 'published in', array[i].yearPublished);
     };
     return true;
 }
+
+showCollection(collection);
+
+function findByArtist(artistSearch, array){
+let songList=[];
+for(i=0; i<array.length; i++){
+    if (array[i].artist === artistSearch){
+        songList.push(array[i]);
+    };
+};
+return songList;
+}
+//time to test
+console.log('Searching for Chopin in array, should return two objects:', findByArtist('Chopin', collection));
+
+console.log('Searching for Mylie Cyrus in array, should return empty array:', findByArtist('Mylie Cyrus', collection));
