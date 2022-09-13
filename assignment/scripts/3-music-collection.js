@@ -10,11 +10,19 @@ let object={};
  return object;
 }
 
-addToCollection('2Pac', 'California Love', 1995);
-addToCollection('Chopin', 'Ballade No. 1', 1836);
-addToCollection('Chopin', 'Andante spianato et grande polonaise brillante', 1834);
-addToCollection('Neil Young', 'Harvest Moon', 1992);
+addToCollection('California Love', '2Pac', 1995);
+addToCollection('Ballade No. 1', 'Chopin', 1836);
+addToCollection('Andante spianato et grande polonaise brillante', 'Chopin', 1834);
+addToCollection('Harvest Moon', 'Neil Young', 1992);
 addToCollection('Daughter', 'Loudon Wainwright III', 2007);
 addToCollection('Brooklyn Ferry', 'Holy Hive', 2021);
 
 console.log('list of songs:', collection);
+
+function showCollection(array){
+    console.log('Number of songs in collection:', array.length);
+    for(i=0; i<array.length-1; i++){
+        console.log(array[i].title, 'by', array[i].artist, 'published in', array[i].yearPublished);
+    };
+    return true;
+}
