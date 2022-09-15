@@ -9,6 +9,7 @@ let object={};
  console.log('Song added:', object);
  return object;
 }
+//end function
 
 addToCollection('California Love', '2Pac', 1995);
 addToCollection('Ballade No. 1', 'Chopin', 1836);
@@ -18,6 +19,7 @@ addToCollection('Strange Wierdos', 'Loudon Wainwright III', 2007);
 addToCollection('Holy Hive', 'Holy Hive', 2021);
 
 console.log('list of albums:', collection);
+//added six albums and then logged to test
 
 function showCollection(array){
     console.log('Number of albums in collection:', array.length);
@@ -28,6 +30,7 @@ function showCollection(array){
 }
 
 showCollection(collection);
+//end showCollection function and logged test.
 
 function findByArtist(artistSearch, array){
 let songList=[];
@@ -43,6 +46,23 @@ console.log('Searching for Chopin in array, should return two objects:', findByA
 
 console.log('Searching for Mylie Cyrus in array, should return empty array:', findByArtist('Mylie Cyrus', collection));
 
+//Test and function complete
 
 //STRETCH GOALS
-//I dont fully understand what the stretch goals are asking me to do. Instructions are confusing.
+
+function search(artistSearch, yearPublishedSearch){
+    let results=[];
+    if(artistSearch===undefined ||yearPublishedSearch===undefined){
+        return collection;
+    }
+   
+    else{
+        for(i=0; i<collection.length; i++){
+        if(collection[i].artist===artistSearch && collection[i].yearPublished===yearPublishedSearch){
+        results.push(collection[i]);
+        }
+    };
+    return results;
+};
+};
+
