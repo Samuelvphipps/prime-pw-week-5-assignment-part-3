@@ -66,3 +66,7 @@ function search(artistSearch, yearPublishedSearch){
 };
 };
 
+console.log('test 1 should return Ballade No 1 object', search('Chopin', 1836));
+console.log('test 2, should return empty array:', search('Chopin', 1999));
+console.log('test 3, should return collection:', search('Chopin'));
+
