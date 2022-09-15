@@ -27,9 +27,10 @@ function showCollection(array){
         console.log(array[i].title, 'by', array[i].artist, 'published in', array[i].yearPublished);
     };
     return true;
-}
+};
 
 showCollection(collection);
+
 //end showCollection function and logged test.
 
 function findByArtist(artistSearch, array){
@@ -38,9 +39,10 @@ for(i=0; i<array.length; i++){
     if (array[i].artist === artistSearch){
         songList.push(array[i]);
     };
-};
+};                              
 return songList;
-}
+};
+
 //time to test
 console.log('Searching for Chopin in array, should return two objects:', findByArtist('Chopin', collection));
 
@@ -68,6 +70,7 @@ console.log('Searching for Mylie Cyrus in array, should return empty array:', fi
 
 function search(objectSearch){
     let result=[];
+    //Here I was hoping to find a better way to do this. 
      if(objectSearch.artist===undefined || objectSearch.yearPublished===undefined){
          return collection;
      }
@@ -90,4 +93,7 @@ console.log('test 3, should return collection:', search({artist: 'Chopin'}));
 
 //end of stretch 1
 
+
+
+//Stretch two...
 
