@@ -50,7 +50,7 @@ console.log('Searching for Mylie Cyrus in array, should return empty array:', fi
 
 //STRETCH GOALS
 
-function search(artistSearch, yearPublishedSearch){
+/*function search(artistSearch, yearPublishedSearch){
     let results=[];
     if(artistSearch===undefined ||yearPublishedSearch===undefined){
         return collection;
@@ -64,9 +64,30 @@ function search(artistSearch, yearPublishedSearch){
     };
     return results;
 };
-};
+};*/
 
-console.log('test 1 should return Ballade No 1 object', search('Chopin', 1836));
-console.log('test 2, should return empty array:', search('Chopin', 1999));
-console.log('test 3, should return collection:', search('Chopin'));
+function search(objectSearch){
+    let result=[];
+     if(objectSearch.artist===undefined || objectSearch.yearPublished===undefined){
+         return collection;
+     }
+     else{
+        for(i=0; i<collection.length; i++){
+            if(
+                collection[i].artist===objectSearch.artist &&
+                collection[i].yearPublished===objectSearch.yearPublished
+                ){
+                    result.push(collection[i])
+                ;}
+        };
+     };
+     return result;
+    };
+
+console.log('test 1 should return Ballade No 1 object', search({artist: 'Chopin', yearPublished: 1836}));
+console.log('test 2, should return empty array:', search({artist: 'Chopin', yearPublished: 1999}));
+console.log('test 3, should return collection:', search({artist: 'Chopin'}));
+
+//end of stretch 1
+
 
